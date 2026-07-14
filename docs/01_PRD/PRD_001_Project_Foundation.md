@@ -18,6 +18,9 @@ The goal is not to create another CRM or a collection of disconnected plugins.
 The goal is to create a complete business management ecosystem that combines CRM, ERP, OMS, HRM, Automation, AI, Customer Management, and Enterprise Operations into one secure, scalable, and high-performance platform.
 
 Users should experience Falcon One as a modern SaaS application, not as a traditional WordPress system.
+Falcon One is designed as an enterprise business application powered by WordPress rather than a traditional WordPress website.
+
+The platform shall provide a seamless application-like experience where WordPress operates as the underlying infrastructure while Falcon One delivers the complete business operating environment through dedicated frontend portals.
 ## Core Platform Philosophy
 
 Falcon One Enterprise follows a **Frontend-First Enterprise Architecture**.
@@ -215,6 +218,9 @@ The project must follow:
 - Scalable Database Design
 - Maintainable Code Structure
 
+- Frontend-First Architecture
+- Builder-First UI Composition
+- Presentation Layer Separation
 ---
 
 # 8. Theme Compatibility Policy
@@ -239,6 +245,7 @@ No Falcon One feature shall require a specific theme.
 
 Themes will only control visual presentation such as:
 
+- Public Website Presentation
 - Header
 - Footer
 - Typography
@@ -246,6 +253,10 @@ Themes will only control visual presentation such as:
 
 Falcon One will control:
 
+- Frontend Business Portals
+- Business Navigation
+- Business Interface
+- Business Workflows
 - Business Logic
 - Dashboards
 - CRM
@@ -293,6 +304,7 @@ Business users will access:
 - Business Tools
 
 Users should not require WordPress Admin access for daily operations.
+> **Architecture Rule:** Every business module introduced in Falcon One shall expose its primary user experience through a dedicated frontend interface. The WordPress Administration Panel exists for platform management, configuration, development, and visual design only.
 ---
 
 ## Frontend Business Portals
@@ -513,7 +525,9 @@ All future:
 - Development Decisions
 
 must follow this document.
+This document represents the permanent architectural foundation of Falcon One Enterprise.
 
+Future modules, APIs, database changes, user interfaces, frontend portals, builder components, and visual customization systems shall comply with the principles established within this document unless superseded by an officially approved architecture revision.
 ---
 
 **Status:** APPROVED  
