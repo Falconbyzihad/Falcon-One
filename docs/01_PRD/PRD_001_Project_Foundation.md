@@ -293,7 +293,77 @@ Business users will access:
 - Business Tools
 
 Users should not require WordPress Admin access for daily operations.
+---
 
+## Frontend Business Portals
+
+Every authenticated user shall access Falcon One through a dedicated frontend portal.
+
+Examples include:
+
+- Super Administrator Portal
+- Organization Administrator Portal
+- Branch Administrator Portal
+- Sales Portal
+- Customer Support Portal
+- Warehouse Portal
+- Logistics Portal
+- HR Portal
+- Finance Portal
+- Customer Portal
+
+Each portal shall provide an independent navigation structure, dashboard, permissions, workflows, and business tools based on the authenticated user's role.
+
+Portal layouts shall be configurable without modifying core business logic.
+
+---
+
+## Frontend Routing
+
+Falcon One shall provide its own application routing layer.
+
+Examples:
+
+- /dashboard
+- /crm
+- /customers
+- /orders
+- /products
+- /inventory
+- /warehouse
+- /logistics
+- /hr
+- /finance
+- /reports
+- /settings
+- /profile
+
+Business navigation shall remain independent from the WordPress Administration Panel.
+
+---
+
+## Visual Customization Policy
+
+Every frontend business page shall support visual customization.
+
+Administrators shall be able to customize:
+
+- Page Layout
+- Sections
+- Navigation
+- Cards
+- Tables
+- Forms
+- Buttons
+- Typography
+- Colors
+- Icons
+- Containers
+- Grid Layouts
+- Responsive Behavior
+- Dynamic Visibility
+
+Visual customization shall not require modification of core business logic.
 ---
 
 # 11. Permission Model
