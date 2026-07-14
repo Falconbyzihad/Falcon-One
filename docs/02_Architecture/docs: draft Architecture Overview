@@ -194,33 +194,47 @@ No layer shall directly assume responsibilities belonging to another architectur
 
 # 4. High-Level Architecture
 
-Falcon One consists of the following architectural layers:
+Falcon One Enterprise follows a layered enterprise architecture that clearly separates infrastructure, platform services, business logic, presentation, and user interaction.
 
-User Layer
+The platform is designed around a Frontend-First Business Operating System model while using WordPress as the underlying infrastructure.
 
-↓
+The primary architecture is illustrated below.
 
-Frontend Layer
-
-↓
-
-API Layer
+```text
+Business Users
+(Super Admin, Managers, Employees, Customers)
 
 ↓
 
-Authentication Layer
+Frontend Business Portals
 
 ↓
 
-Authorization Layer
+Portal Router & Navigation
 
 ↓
 
-Business Service Layer
+Falcon One Builder Framework
 
 ↓
 
-Module Layer
+Elementor Integration Layer
+
+↓
+
+Business Components
+
+↓
+
+Business Modules
+
+↓
+
+Application Services
+
+↓
+
+Authentication & Authorization
 
 ↓
 
@@ -228,116 +242,173 @@ Repository Layer
 
 ↓
 
-Database Layer
+WordPress Infrastructure
 
-Every request shall pass through these layers in a secure and predictable order.
+↓
 
----
+Database
+```
+
+Every request shall pass through controlled architectural layers.
+
+Each layer has an independent responsibility and communicates only through defined interfaces.
+
+This layered architecture improves:
+
+- Security
+- Scalability
+- Maintainability
+- Testability
+- Performance
+- Future SaaS Compatibility
 
 # 5. Core System Layers
 
-## Presentation Layer
+Falcon One Enterprise is built using a modern layered enterprise architecture.
 
-Responsible for:
+Each architectural layer has a single responsibility and communicates only through defined interfaces. This separation ensures scalability, maintainability, performance, security, and long-term extensibility while keeping business logic independent from presentation and infrastructure.
 
-- Dashboards
-- Forms
-- Reports
-- Widgets
-- Tables
-- Charts
-- Notifications
-
-This layer shall remain lightweight.
-
-Business logic shall never exist here.
+The platform follows a **Frontend-First** architecture where business users operate entirely through frontend portals, while WordPress serves as the underlying infrastructure and development platform.
 
 ---
 
-## API Layer
+## Infrastructure Layer
 
-Handles:
+The Infrastructure Layer provides the technical foundation required to operate Falcon One Enterprise.
 
+Primary responsibilities include:
+
+- WordPress Core
+- Plugin Framework
+- Database Engine
+- User Management
 - REST API
-- AJAX Requests
-- Internal APIs
-- Future Mobile APIs
+- Media Library
+- Cron System
+- Theme Integration
+- Update Management
+- License Infrastructure
+- System Configuration
 
-All requests shall pass through authentication and authorization before reaching business services.
-
----
-
-## Authentication Layer
-
-Responsible for:
-
-- Login
-- Logout
-- Sessions
-- Office IP Verification
-- Device Verification
-- Multi-factor Authentication (Future)
-- License Verification
+This layer provides platform services only and does not execute business workflows.
 
 ---
 
-## Authorization Layer
+## WordPress Platform Layer
 
-Responsible for:
+WordPress functions as the platform management and development environment rather than the primary business application.
 
-- Roles
-- Permissions
-- Policies
-- Branch Access
-- Department Access
-- Team Access
-- Dynamic Rules
+Responsibilities include:
 
-No business operation may bypass this layer.
+- Plugin Installation
+- Platform Configuration
+- Global Settings
+- Theme Management
+- Elementor Management
+- System Maintenance
+- Cache Management
+- Backup Management
+- Developer Configuration
+- Environment Management
 
----
+Business users should not rely on wp-admin for daily operational activities.
 
-## Business Layer
+The WordPress Administration Panel exists primarily for:
 
-Contains:
+- Development
+- Platform Administration
+- Visual Design
+- Global Configuration
+- System Maintenance
 
-- CRM Logic
-- Sales Logic
-- Logistics Logic
-- Inventory Logic
-- Reporting Logic
-- Automation Logic
-- AI Logic
-
-Business rules shall remain independent from UI components.
-
----
-
-## Repository Layer
-
-Responsible for:
-
-- Database Queries
-- Data Mapping
-- Query Optimization
-- Transaction Management
-
-SQL queries shall never exist inside controllers.
+Daily business operations shall be performed through Falcon One frontend portals.
 
 ---
 
-## Database Layer
+## Frontend Portal Layer
 
-Responsible for:
+The Frontend Portal Layer is the primary business interface of Falcon One Enterprise.
 
-- Data Storage
-- Relationships
-- Indexing
-- Constraints
-- Optimization
-- Backup Strategy
+All authenticated users perform their daily business activities through dedicated frontend portals instead of the WordPress Administration Panel.
+
+Supported portals include:
+
+- Super Administrator Portal
+- Organization Administrator Portal
+- Branch Administrator Portal
+- Team Leader Portal
+- Sales Portal
+- Customer Support Portal
+- Warehouse Portal
+- Logistics Portal
+- HR Portal
+- Finance Portal
+- Customer Portal
+
+Each portal provides its own:
+
+- Dashboard
+- Navigation
+- Widgets
+- Business Modules
+- Reports
+- Shortcuts
+- Notifications
+- Profile Management
+
+Every portal shall be dynamically rendered according to user permissions and assigned responsibilities.
+
+Business operations shall never depend on wp-admin.
 
 ---
+
+## Portal Router Layer
+
+The Portal Router Layer controls how users navigate throughout Falcon One.
+
+It is responsible for routing authenticated users to the correct portal, modules, pages, and workflows.
+
+Primary responsibilities include:
+
+- Route Resolution
+- Portal Loading
+- Dynamic Navigation
+- Permission Validation
+- Redirect Management
+- Organization Context
+- Branch Context
+- User Context
+- Session Validation
+- Default Landing Pages
+
+The routing system shall support future multi-company and SaaS deployments without architectural changes.
+
+---
+
+## Builder Framework Layer
+
+The Falcon One Builder Framework is the core visual composition engine of the platform.
+
+It is responsible for generating reusable business interfaces while keeping presentation completely separated from business logic.
+
+Primary responsibilities include:
+
+- Dashboard Builder
+- Portal Builder
+- Page Builder
+- Component Library
+- Dynamic Layout Engine
+- Template Management
+- Widget Registration
+- Global UI Configuration
+- Layout Composition
+- Responsive Layout Rendering
+- Design Tokens
+- Component Rendering
+
+The Builder Framework shall remain independent from any specific visual editor.
+
+Every business interface shall be generated through reusable components rather than hardcoded page layouts.
 
 # 6. Theme Independence
 
