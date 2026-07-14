@@ -39,6 +39,65 @@ Falcon One shall be designed to provide:
 - Future extensibility
 
 The system shall remain maintainable for many years without requiring major architectural redesign.
+---
+
+## Frontend-First Platform Goals
+
+Falcon One adopts a Frontend-First Business Operating System architecture.
+
+The platform shall provide a complete business application experience where daily operational activities are performed entirely through dedicated frontend portals.
+
+WordPress Administration functions primarily as the platform management and development environment.
+
+The architecture shall ensure a clear separation between:
+
+- Platform Infrastructure
+- Business Operations
+- Presentation Layer
+- Business Logic
+- Data Management
+
+This separation improves maintainability, scalability, security, and future SaaS compatibility.
+
+---
+
+## Builder-First Design Goals
+
+Falcon One shall provide a reusable visual architecture built around business components rather than hardcoded pages.
+
+The Builder Framework shall support:
+
+- Reusable Components
+- Dynamic Layouts
+- Configurable Dashboards
+- Portal Templates
+- Component Libraries
+- Visual Composition
+- Future Builder Integrations
+
+Visual customization shall remain independent from business logic implementation.
+
+---
+
+## WordPress Infrastructure Goals
+
+WordPress shall act as the underlying infrastructure platform.
+
+Responsibilities include:
+
+- Core Framework
+- Plugin Lifecycle
+- Database Engine
+- User Management
+- Media Library
+- REST API
+- Scheduling (Cron)
+- Theme Integration
+- Plugin Management
+- System Updates
+- License Infrastructure
+
+Business workflows shall not depend upon wp-admin interfaces.
 
 ---
 
@@ -99,6 +158,38 @@ Repositories shall manage database operations.
 
 The architecture shall support future migration into a SaaS platform without redesigning the core application.
 
+---
+
+## Frontend-First
+
+Business users shall interact with Falcon One exclusively through dedicated frontend portals.
+
+The frontend represents the primary business application, while WordPress Administration remains focused on platform configuration, development, maintenance, and visual design.
+
+---
+
+## Builder-First
+
+Every business interface shall be composed from reusable visual components.
+
+Layouts, dashboards, navigation structures, widgets, and business pages shall remain visually configurable without modifying core business logic.
+
+---
+
+## Separation of Concerns
+
+Falcon One strictly separates:
+
+- Infrastructure
+- Presentation
+- Business Logic
+- Services
+- Data Access
+- Storage
+
+Every architectural layer shall have a clearly defined responsibility.
+
+No layer shall directly assume responsibilities belonging to another architectural layer.
 ---
 
 # 4. High-Level Architecture
