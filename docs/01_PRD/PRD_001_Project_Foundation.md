@@ -420,12 +420,83 @@ The following decisions are permanently adopted:
 - Falcon One will be a standalone enterprise plugin.
 - Falcon One will not depend on any specific theme.
 - WoodMart will be supported but never required.
-- Elementor will be supported through native widgets.
+- Elementor shall integrate natively with Falcon One Builder and expose configurable business components for visual customization.
 - WooCommerce will be optional integration.
 - Internal users will use custom dashboards.
 - Enterprise modules will follow modular architecture.
 - Future licensing and SaaS expansion must remain possible.
 
+### Platform Architecture
+
+- WordPress shall serve as the infrastructure and application engine.
+- WordPress Administration shall function primarily as the development and platform management workspace.
+- Daily business operations shall be performed exclusively through frontend portals.
+- Falcon One shall follow a Frontend-First architecture across every business module.
+
+---
+
+### Business Interface Policy
+
+- Every business module shall provide a dedicated frontend interface.
+- Business users shall never be required to use wp-admin for routine business activities.
+- Business workflows shall remain independent from WordPress Administration.
+- Frontend portals shall provide a SaaS-like user experience.
+
+---
+
+### Visual Builder Policy
+
+- Falcon One Builder Framework shall be the primary UI composition engine.
+- Elementor shall operate as the primary visual design editor through native integration.
+- Business logic shall remain independent from visual presentation.
+- Visual layouts shall avoid hardcoded structures wherever technically feasible.
+- Every business component shall be reusable and visually configurable.
+
+---
+
+### Customization Policy
+
+The following elements shall support visual customization wherever technically applicable:
+
+- Page Layout
+- Dashboard Layout
+- Navigation
+- Sidebar
+- Header
+- Footer
+- Sections
+- Containers
+- Widgets
+- Cards
+- Tables
+- Forms
+- Buttons
+- Icons
+- Typography
+- Colors
+- Spacing
+- Responsive Behavior
+- Redirect Behavior
+- Dynamic Visibility
+
+Customizations shall not require modification of core business logic.
+
+---
+
+### Future Compatibility Policy
+
+The architecture shall remain compatible with future:
+
+- SaaS Deployment
+- Multi-Tenant Architecture
+- Multi-Company Support
+- Mobile Applications
+- Headless Applications
+- AI Automation
+- Additional Visual Builders
+- Enterprise Integrations
+
+No architectural decision shall unnecessarily restrict future expansion.
 ---
 
 # 15. Approval
