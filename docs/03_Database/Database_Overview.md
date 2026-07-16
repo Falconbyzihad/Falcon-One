@@ -33,6 +33,10 @@ The Falcon One database shall be designed to achieve the following objectives:
 - Reliability
 - Modular Expansion
 - Future SaaS Compatibility
+- Frontend Portal Support
+- Enterprise Portal Architecture
+- Builder Framework Compatibility
+- Platform Layer Separation
 
 The database architecture shall support both current business requirements and future enterprise growth.
 
@@ -53,6 +57,11 @@ This approach improves:
 - Security
 - Scalability
 - Upgrade Safety
+The database architecture shall remain independent from the presentation layer.
+
+Business operations performed through frontend portals, APIs, automation, or future applications shall use the same database services and repositories.
+
+No database structure shall depend on WordPress themes, page builders, or frontend implementations.
 
 ---
 
@@ -97,6 +106,9 @@ The database layer shall be responsible for:
 - Migration Support
 - Backup Compatibility
 - Audit Support
+- Portal Data Management
+- Builder Configuration Storage
+- Enterprise Workflow Support
 
 Business logic shall never exist inside the database.
 
@@ -119,6 +131,7 @@ Attendance owns employee attendance records.
 No module shall directly manipulate another module's internal data.
 
 Communication shall occur through Services.
+Shared platform data shall be managed through Core Services rather than direct module access.
 
 ---
 
@@ -181,6 +194,8 @@ The Falcon One database shall support:
 - Future SaaS deployment
 - Enterprise reporting
 - AI-powered analytics
+- Frontend Portal Architecture
+- Enterprise Builder Framework
 
 The database architecture shall remain stable throughout future platform expansion.
 
@@ -538,6 +553,8 @@ The database architecture shall support future expansion to:
 - Multi-Warehouse
 - Franchise Operations
 - Multi-Tenant SaaS
+- Organization Isolation
+- Workspace Isolation
 
 The schema shall be designed to accommodate these capabilities without requiring major structural redesign.
 
@@ -702,6 +719,9 @@ Planned expansion includes:
 - Data Warehouse
 - Event Store
 - AI Data Pipeline
+- Portal Analytics
+- Builder Metadata
+- Enterprise Workflow Engine
 
 Future enhancements shall integrate without requiring major schema redesign.
 
@@ -717,6 +737,9 @@ Architecture
 - Modular Schema
 - Repository Pattern
 - Migration-Based Updates
+- Frontend Portal Ready
+- Builder Framework Ready
+- Platform Layer Independent
 
 Security
 
