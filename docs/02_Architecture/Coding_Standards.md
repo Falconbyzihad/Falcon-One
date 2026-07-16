@@ -13,29 +13,55 @@
 
 # 1. Purpose
 
-This document defines the official coding standards for Falcon One Enterprise.
+This document defines the official coding and development standards for Falcon One Enterprise.
 
-Its purpose is to ensure that every part of the system is developed using consistent, secure, maintainable, and enterprise-grade coding practices.
+Its purpose is to ensure that every line of code written for Falcon One follows a consistent, secure, maintainable, scalable, and enterprise-grade engineering standard.
 
-All developers, contributors, AI code generators, and third-party module developers shall follow these standards.
+These standards apply to:
 
----
+- Core Development
+- Business Modules
+- APIs
+- Elementor Widgets
+- WooCommerce Integrations
+- Frontend Portals
+- Backend Platform Services
+- AI-Assisted Development
+- Future Extensions
+
+Every contributor, whether human or AI, shall comply with this document.
+
+This document complements the Architecture documents and serves as the primary engineering reference for software implementation.
 
 # 2. Development Philosophy
 
-Falcon One shall be developed with the following philosophy:
+Falcon One Enterprise shall be developed as an enterprise Business Operating System rather than a traditional WordPress plugin.
 
-- Readability First
-- Security First
-- Performance First
-- Maintainability First
-- Scalability First
-- Testability First
-- Reusability First
+Every implementation shall prioritize:
 
-Code should always prioritize long-term quality over short-term development speed.
+- Readability
+- Security
+- Performance
+- Maintainability
+- Scalability
+- Testability
+- Reusability
+- Consistency
 
----
+The platform shall follow these core engineering principles:
+
+- Frontend-first business operations
+- WordPress as the platform infrastructure
+- wp-admin as the development and platform administration layer
+- Frontend portals for daily business operations
+- Business logic independent from presentation
+- Builder-independent architecture
+- Theme-independent architecture
+- API-first implementation
+- Service-oriented architecture
+- Modular development
+
+Short-term development speed shall never take precedence over long-term architecture quality.
 
 # 3. General Coding Principles
 
@@ -49,7 +75,13 @@ Every source file shall follow these principles:
 - Keep functions focused on one responsibility.
 - Avoid global state whenever possible.
 - Separate business logic from presentation logic.
+Additional Principles:
 
+- Business logic shall remain independent from presentation.
+- Frontend portals shall be the primary business interface.
+- wp-admin shall be reserved for platform administration and development.
+- Shared functionality belongs inside Core Services.
+- Modules shall communicate through public services and events.
 ---
 
 # 4. WordPress Coding Standards
@@ -68,7 +100,16 @@ Requirements include:
 - Proper hook registration.
 
 WordPress core files shall never be modified.
+WordPress shall function as the platform infrastructure.
 
+Business users shall perform daily operations through Falcon One frontend portals rather than wp-admin.
+
+wp-admin shall primarily be used for:
+
+- Platform Configuration
+- Development
+- Design
+- Global Administration
 ---
 
 # 5. PHP Standards
@@ -88,7 +129,12 @@ Coding requirements:
 - Modern PHP language features.
 
 Deprecated PHP features shall not be used.
+Additional Requirements:
 
+- Dependency Injection
+- Service Container
+- Constructor Injection
+- Strict Separation of Concerns
 ---
 
 # 6. SOLID Principles
