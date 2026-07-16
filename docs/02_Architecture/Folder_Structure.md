@@ -34,10 +34,13 @@ The folder structure shall follow these principles:
 - API-First Design
 - Theme Independence
 - Future SaaS Compatibility
-
+- Frontend-First Architecture
+- Platform-Driven Administration
+- Builder Framework Support
+- Enterprise Portal Architecture
 ---
 
-# 3. Root Directory
+# 3. Root Directory├── builders/
 
 The Falcon One Enterprise plugin shall follow the structure below.
 
@@ -84,6 +87,22 @@ Examples:
 - Images
 - SVG
 - Build Files
+
+## builders/
+
+Contains Falcon One visual builder framework.
+
+Examples:
+
+- Dashboard Builder
+- Form Builder
+- Table Builder
+- Widget Builder
+- Layout Builder
+- Menu Builder
+- Portal Builder
+
+Builders generate frontend business interfaces without containing business logic.
 
 ---
 
@@ -268,7 +287,7 @@ app/
 
 ├── Console/
 ├── Contracts/
-├── Core/
+├── Core/├── Builders/
 ├── Controllers/
 ├── DTO/
 ├── Events/
@@ -308,6 +327,20 @@ Examples:
 - License Commands
 - Cleanup Commands
 
+## Builders/
+
+Contains reusable builder engines.
+
+Examples:
+
+- Dashboard Builder
+- Portal Builder
+- Widget Builder
+- Layout Builder
+- Navigation Builder
+- Form Builder
+
+Builders are responsible for generating frontend business interfaces while business logic remains inside Services.
 ---
 
 ## Contracts/
@@ -1077,7 +1110,7 @@ routes/
 ├── ajax.php
 ├── api.php
 ├── auth.php
-├── frontend.php
+├── portal.php
 ├── webhooks.php
 └── console.php
 ```
@@ -1201,6 +1234,7 @@ Static assets shall be organized by purpose.
 
 ```
 assets/
+portal/
 
 ├── admin/
 ├── frontend/
@@ -1527,7 +1561,9 @@ Commercial:
 - SaaS Ready
 
 These decisions shall remain unchanged unless approved through an architecture review.
-
+- Frontend Portal Architecture
+- Builder Framework
+- Platform Layer Separation
 ---
 
 # 39. Future Expansion
