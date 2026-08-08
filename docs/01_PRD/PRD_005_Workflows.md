@@ -1,6 +1,3 @@
-````md
-# PRD-005 — Workflows
-
 **Project:** Falcon One Enterprise  
 **Document Type:** Product Requirements Document (PRD)  
 **Document ID:** PRD-005  
