@@ -3,6 +3,8 @@
 **Document ID:** PRD-004  
 **Version:** 1.0.0  
 **Status:** Draft  
+**Priority:** Critical
+
 ---
 
 ## 1. Purpose
